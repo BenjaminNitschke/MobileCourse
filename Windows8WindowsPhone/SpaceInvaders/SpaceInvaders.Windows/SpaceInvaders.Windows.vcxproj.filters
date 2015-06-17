@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>5a2ee230-5117-4d06-8fbd-550fe65b9a47</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>80a246d7-9e5f-4c5f-af18-b0b72b0fcc4d</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>49ec84fa-4a57-423f-a4e4-5140064bb0f7</UniqueIdentifier>
+    </Filter>
+    <Image Include="Assets\Logo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceInvaders.Windows_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\SpaceInvaders.Shared\Content\Enemy.png">
+      <Filter>Content</Filter>
+    </Image>
+    <Image Include="..\SpaceInvaders.Shared\Content\Missile.png">
+      <Filter>Content</Filter>
+    </Image>
+    <Image Include="..\SpaceInvaders.Shared\Content\Ship.png">
+      <Filter>Content</Filter>
+    </Image>
+    <Image Include="..\SpaceInvaders.Shared\Content\Background.png">
+      <Filter>Content</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
