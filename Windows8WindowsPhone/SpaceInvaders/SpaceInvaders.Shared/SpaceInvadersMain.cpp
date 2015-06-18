@@ -33,6 +33,17 @@ void SpaceInvadersMain::CreateWindowSizeDependentResources()
 {
 	// TODO: Replace this with the size-dependent initialization of your app's content.
 	m_sceneRenderer->CreateWindowSizeDependentResources();
+	/*trying to fix issue on Windows Phone http://www.catalinzima.com/2012/12/handling-orientation-in-a-windows-phone-8-game/
+	auto m_window = Windows::UI::Core::CoreWindow::GetForCurrentThread();
+	auto m_windowBounds = m_deviceResources->GetOutputSize();
+	if (m_window->Bounds.Width != m_windowBounds.Width ||
+		m_window->Bounds.Height != m_windowBounds.Height)
+	{
+		ID3D11RenderTargetView* nullViews[] = { nullptr };
+		m_deviceResources->GetD3DDeviceContext()->OMSetRenderTargets(ARRAYSIZE(nullViews), nullViews, nullptr);
+		m_deviceResources->GetD3DDeviceContext()->Flush();
+		CreateWindowSizeDependentResources();
+	}*/
 }
 
 // Updates the application state once per frame.

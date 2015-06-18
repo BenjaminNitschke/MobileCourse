@@ -262,8 +262,11 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 		// Otherwise, create a new one using the same adapter as the existing Direct3D device.
 		DXGI_SWAP_CHAIN_DESC1 swapChainDesc = { 0 };
 
+		//wrong for our app, we want 800x480, not 480x800
 		swapChainDesc.Width = lround(m_d3dRenderTargetSize.Width); // Match the size of the window.
 		swapChainDesc.Height = lround(m_d3dRenderTargetSize.Height);
+		//swapChainDesc.Width = lround(m_d3dRenderTargetSize.Height);
+		//swapChainDesc.Height = lround(m_d3dRenderTargetSize.Width); 
 		swapChainDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM; // This is the most common swap chain format.
 		swapChainDesc.Stereo = false;
 		swapChainDesc.SampleDesc.Count = 1; // Don't use multi-sampling.
@@ -313,12 +316,14 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 	// Note the rotation angle for the 2D and 3D transforms are different.
 	// This is due to the difference in coordinate spaces.  Additionally,
 	// the 3D matrix is specified explicitly to avoid rounding errors.
-
+	/*
 	switch (displayRotation)
 	{
 	case DXGI_MODE_ROTATION_IDENTITY:
+	*/
 		m_orientationTransform2D = Matrix3x2F::Identity();
 		m_orientationTransform3D = ScreenRotation::Rotation0;
+		/*
 		break;
 
 	case DXGI_MODE_ROTATION_ROTATE90:
@@ -348,8 +353,8 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 	DX::ThrowIfFailed(
 		m_swapChain->SetRotation(displayRotation)
-		);
-
+	);
+	*/
 	// Create a render target view of the swap chain back buffer.
 	ComPtr<ID3D11Texture2D> backBuffer;
 	DX::ThrowIfFailed(

@@ -9,6 +9,8 @@ public class SpaceInvadersSurfaceView extends GLSurfaceView {
         super(context);
         setEGLContextClientVersion(1);
         renderer = new SpaceInvadersRenderer(context.getAssets());
+        // Fix broken emulator on some systems
+        setEGLConfigChooser(8, 8, 8, 8, 16, 0);
         setRenderer(renderer);
     }
 

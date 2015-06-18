@@ -36,8 +36,9 @@ public class MyGLSurfaceView extends GLSurfaceView {
 
         // Set the Renderer for drawing on the GLSurfaceView
         mRenderer = new MyGLRenderer();
+        // Fix broken emulator on some systems
+        setEGLConfigChooser(8, 8, 8, 8, 16, 0);
         setRenderer(mRenderer);
-
         // Render the view only when there is a change in the drawing data
         setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
     }
