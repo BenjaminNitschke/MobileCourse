@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="jni">
+      <UniqueIdentifier>86866d7b-1ee7-4e2b-b824-1dbe05175245</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>c88954b3-f12c-456a-b653-159c7e15966c</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\values">
+      <UniqueIdentifier>f07e7e96-5bf0-4b27-95d0-321d8d2054c8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni\stblib">
+      <UniqueIdentifier>{940101df-5a5e-4a4b-b253-12e17f58cb43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{bfc9077e-0f55-454f-a28e-cef6cfd75729}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <Filter>res\values</Filter>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\main.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="native_app_glue\android_native_app_glue.c" />
+    <ClCompile Include="jni\Sprite.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\Texture.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\SpaceGame.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\stblib\stb_image.c">
+      <Filter>jni\stblib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="native_app_glue\android_native_app_glue.h" />
+    <ClInclude Include="jni\SpaceGame.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\Sprite.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\Texture.h">
+      <Filter>jni</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb_image.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb_image_write.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb_perlin.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb_divide.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+    <ClInclude Include="jni\stblib\stb_dxt.h">
+      <Filter>jni\stblib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\Ship.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\Background.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\Enemy.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\Missile.png">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
